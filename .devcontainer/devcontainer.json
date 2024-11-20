@@ -1,0 +1,12 @@
+{
+  "name": "Bun Devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["YoavBls.pretty-ts-errors"]
+    }
+  }
+}
