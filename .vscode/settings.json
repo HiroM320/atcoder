@@ -1,4 +1,5 @@
 {
+  "typescript.tsdk": "node_modules/typescript/lib",
   "github.copilot.enable": {
     "typescript": false
   }
