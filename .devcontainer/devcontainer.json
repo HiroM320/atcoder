@@ -1,5 +1,5 @@
 {
-  "name": "Bun Devcontainer",
+  "name": "AtCoder - TypeScript(bun)",
   "build": {
     "dockerfile": "Dockerfile",
     "context": ".."
@@ -8,5 +8,6 @@
     "vscode": {
       "extensions": ["YoavBls.pretty-ts-errors"]
     }
-  }
+  },
+  "postCreateCommand": "bun install"
 }
