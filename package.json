@@ -1,7 +1,4 @@
 {
-  "name": "atcoder",
-  "module": "index.ts",
-  "type": "module",
   "devDependencies": {
     "atcoder-cli": "^2.2.0",
     "@types/bun": "latest"
