@@ -4,10 +4,13 @@
     "dockerfile": "Dockerfile",
     "context": ".."
   },
+  "postCreateCommand": {
+    "bun": "bun install",
+    "ojt": "pip3 install online-judge-tools"
+  },
   "customizations": {
     "vscode": {
       "extensions": ["YoavBls.pretty-ts-errors"]
     }
-  },
-  "postCreateCommand": "bun install"
+  }
 }
