@@ -1,0 +1,11 @@
+{
+  "task": {
+    "program": [
+      [
+        "main.ts",
+        "{TaskID}.ts"
+      ]
+    ],
+    "submit": "{TaskID}.ts"
+  }
+}
