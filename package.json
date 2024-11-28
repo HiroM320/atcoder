@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "next": "acc add --choice next",
+    "t": "bun run test",
+    "test": "oj test -c 'bun run ./'",
+    "s": "bun run submit",
+    "submit": "acc submit -s -- --language 5058 --no-open"
+  },
   "devDependencies": {
     "atcoder-cli": "^2.2.0",
     "@types/bun": "latest"
