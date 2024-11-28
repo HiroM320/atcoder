@@ -1,6 +1,5 @@
 // inputに入力データ全体が入る
 const Main = (rawInput: string) => {
-  console.log(rawInput);
   // 1行目がinput[0], 2行目がinput[1], …に入る
   const input = rawInput.split("\n");
   const tmp = input[1].split(" ");
