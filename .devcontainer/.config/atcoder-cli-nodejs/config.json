@@ -1,8 +1,8 @@
 {
   "oj-path": "/home/vscode/.local/bin/oj",
   "default-contest-dirname-format": "{ContestID}",
-  "default-task-dirname-format": "{tasklabel}",
-  "default-test-dirname-format": "tests",
-  "default-task-choice": "all",
+  "default-task-dirname-format": "{TaskID}",
+  "default-test-dirname-format": "test",
+  "default-task-choice": "next",
   "default-template": "templates/typescript"
 }

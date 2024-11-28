@@ -1,11 +1,9 @@
 {
   "task": {
     "program": [
-      [
-        "main.ts",
-        "{TaskID}.ts"
-      ]
+      "index.ts"
     ],
-    "submit": "{TaskID}.ts"
+    "submit": "index.ts",
+    "cmd": "/bin/sh $TEMPLATE_DIR/taskCmd.sh"
   }
 }
