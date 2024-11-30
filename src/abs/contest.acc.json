@@ -97,19 +97,34 @@
       "id": "abc085_c",
       "label": "ABC085C",
       "title": "Otoshidama",
-      "url": "https://atcoder.jp/contests/abs/tasks/abc085_c"
+      "url": "https://atcoder.jp/contests/abs/tasks/abc085_c",
+      "directory": {
+        "path": "abc085_c",
+        "testdir": "test",
+        "submit": "index.ts"
+      }
     },
     {
       "id": "arc065_a",
       "label": "ABC049C",
       "title": "Daydream",
-      "url": "https://atcoder.jp/contests/abs/tasks/arc065_a"
+      "url": "https://atcoder.jp/contests/abs/tasks/arc065_a",
+      "directory": {
+        "path": "arc065_a",
+        "testdir": "test",
+        "submit": "index.ts"
+      }
     },
     {
       "id": "arc089_a",
       "label": "ABC086C",
       "title": "Traveling",
-      "url": "https://atcoder.jp/contests/abs/tasks/arc089_a"
+      "url": "https://atcoder.jp/contests/abs/tasks/arc089_a",
+      "directory": {
+        "path": "arc089_a",
+        "testdir": "test",
+        "submit": "index.ts"
+      }
     }
   ]
 }
