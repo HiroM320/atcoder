@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "web": "acc task",
     "next": "acc add --choice next",
     "t": "bun run test",
     "test": "oj test -c 'bun run ./'",
