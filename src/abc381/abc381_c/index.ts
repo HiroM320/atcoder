@@ -1,46 +1,57 @@
 const main = (rawInput: string) => {
   const [N, S] = rawInput.trim().split("\n");
 
-  let longestLen = 0;
+  // 真面目に問題通りの条件をやるより / を見つけてその左に 1、右に 2 が並んでいるという条件で探すほうが早そう
 
-  for(let startPos=0;startPos<=S.length;startPos++) {
+  let prevSlashPos = 0;
+  let slashPos = S.indexOf("/");
 
-    for(let endPos=0; S.length-startPos>=endPos;endPos++) {
-
-      const TLen = S.length - startPos - endPos;
-
-      if(TLen %2 === 0) {
-        continue;
-      }
-
-
-      const slashPos = (TLen +1)/2;
-      const oneLength = slashPos - 1;
-      const twoLength = TLen - (slashPos + 1) + 1;
-
-      // console.debug(T, slashPos, oneLength, twoLength);
-
-      if(!S.startsWith(`${"1".repeat(oneLength)}/`, startPos)) {
-        continue;
-      }
-
-      if(S.charAt(slashPos-1+startPos) !== "/") {
-        continue;
-      }
-
-      if(twoLength >= 0 && !S.endsWith(`/${"2".repeat(twoLength)}`, endPos)) {
-        continue;
-      }
-
-
-      if(longestLen < TLen) {
-        longestLen = TLen;
-        // console.debug("longest:", TLen);
-      }
-    }
+  // "/" が含まれない文字列は例外
+  if(slashPos === -1) {
+    console.log("0");
+    return;
   }
 
-  console.log(`${longestLen}`);
+  // "/" がある時点で 1 文字確定
+  let longest = 1;
+
+  while(slashPos !== -1) {
+
+    let longestOneLen = 0;
+    let longestTwoLen = 0;
+
+    for(let oneLen= 0; slashPos-1 -oneLen >= prevSlashPos; oneLen++) {
+      if(S.charAt(slashPos-1 -oneLen) !== "1") {
+        if(longestOneLen < oneLen) longestOneLen = oneLen;
+        // console.debug("1:",oneLen);
+        break;
+      }
+    }
+
+    for(let twoLen = 0;slashPos+1 +twoLen<=S.length;twoLen++) {
+      if(S.charAt(slashPos+1 +twoLen) !== "2") {
+        if(longestTwoLen < twoLen) longestTwoLen = twoLen;
+        // console.debug("2:", twoLen);
+        break;
+      }
+    }
+
+    const tempLongest = longestOneLen + 1 + longestTwoLen;
+
+    if(tempLongest > longest) {
+      // ここやっつけ仕事
+      if(tempLongest % 2 === 1) {
+        longest = tempLongest;
+      } else {
+        longest = tempLongest -1;
+      }
+    }
+
+    prevSlashPos = slashPos;
+    slashPos = S.indexOf("/", slashPos+1)
+  }
+
+  console.log(`${longest}`);
 };
 
 
