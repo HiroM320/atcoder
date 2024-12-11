@@ -1,0 +1,20 @@
+{
+  "name": "AtCoder - TypeScript(bun)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "${localWorkspaceFolder}"
+  },
+  "mounts": [
+    // atcoder-cli の設定ディレクトリをマウント
+    "source=${localWorkspaceFolder}/.devcontainer/.config/atcoder-cli-nodejs,target=/home/vscode/.config/atcoder-cli-nodejs,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": {
+    "bun": "bun install",
+    "ojt": "pip3 install online-judge-tools"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["YoavBls.pretty-ts-errors"]
+    }
+  }
+}
