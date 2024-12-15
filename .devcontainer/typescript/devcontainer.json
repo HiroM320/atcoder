@@ -1,7 +1,10 @@
 {
   "name": "AtCoder - TypeScript(bun)",
   "build": {
-    "dockerfile": "Dockerfile",
+    "dockerfile": "../Dockerfile",
+    "args": {
+      "VARIANT": "base:ubuntu"
+    },
     "context": "${localWorkspaceFolder}"
   },
   "mounts": [
@@ -9,8 +12,7 @@
     "source=${localWorkspaceFolder}/.devcontainer/.config/atcoder-cli-nodejs,target=/home/vscode/.config/atcoder-cli-nodejs,type=bind,consistency=cached"
   ],
   "postCreateCommand": {
-    "bun": "bun install",
-    "ojt": "pip3 install online-judge-tools"
+    "install deps": "bun install"
   },
   "customizations": {
     "vscode": {

@@ -4,5 +4,5 @@
   "default-task-dirname-format": "{TaskID}",
   "default-test-dirname-format": "test",
   "default-task-choice": "next",
-  "default-template": "templates/typescript"
+  "default-template": "templates/cpp"
 }

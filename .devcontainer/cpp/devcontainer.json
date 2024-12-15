@@ -1,14 +1,14 @@
 {
   "name": "AtCoder - C++",
   "build": {
-    "dockerfile": "Dockerfile",
+    "dockerfile": "../Dockerfile",
+    "args": {
+      "VARIANT": "cpp:ubuntu"
+    },
     "context": "${localWorkspaceFolder}"
   },
   "mounts": [
     // atcoder-cli の設定ディレクトリをマウント
     "source=${localWorkspaceFolder}/.devcontainer/.config/atcoder-cli-nodejs,target=/home/vscode/.config/atcoder-cli-nodejs,type=bind,consistency=cached"
-  ],
-  "postCreateCommand": {
-    "ojt": "pip3 install online-judge-tools"
-  }
+  ]
 }
