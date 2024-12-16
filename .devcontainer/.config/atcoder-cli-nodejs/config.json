@@ -3,6 +3,6 @@
   "default-contest-dirname-format": "{ContestID}",
   "default-task-dirname-format": "{TaskID}",
   "default-test-dirname-format": "test",
-  "default-task-choice": "next",
+  "default-task-choice": "inquire",
   "default-template": "templates/cpp"
 }

@@ -1,6 +1,11 @@
-const main = (rawInput: string) => {
-  const lines = rawInput.split("\n");
-};
+#include <bits/stdc++.h>
+using namespace std;
 
+int main()
+{
+  string a, b;
+  cin >> a >> b;
 
-main(require("fs").readFileSync("/dev/stdin", "utf8"));
+  cout << a << endl;
+  cout << b << endl;
+}

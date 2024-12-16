@@ -1,6 +1,13 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "github.copilot.enable": {
-    "typescript": false
+    "typescript": false,
+    "cpp": false,
+  },
+  "files.associations": {
+    "*.uiflow": "uiflow",
+    "vector": "cpp",
+    "ostream": "cpp",
+    "iostream": "cpp"
   }
 }
