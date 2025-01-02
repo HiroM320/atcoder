@@ -4,10 +4,9 @@
     "typescript": false,
     "cpp": false,
   },
+  "C_Cpp.autoAddFileAssociations": false,
   "files.associations": {
-    "*.uiflow": "uiflow",
-    "vector": "cpp",
-    "ostream": "cpp",
-    "iostream": "cpp"
+    "*.h": "cpp",
+    "*.c": "cpp"
   }
 }
